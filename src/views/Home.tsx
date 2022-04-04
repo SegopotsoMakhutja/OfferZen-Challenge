@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { SearchBar, Header, ToggleColumns } from '../components';
+import { SearchBar, Table, Header, ToggleColumns } from '../components';
 import { ICandidate } from '../components/Table/types';
 import interviewRequests from '../data/interviewRequests.json';
 import { Flex } from '@chakra-ui/react';
@@ -38,6 +38,7 @@ const Home = () => {
             <SearchBar searchValue={searchKey} handleSearch={onSearch} />
             <ToggleColumns handleClick={onCheckboxClick} isChecked={isChecked}/>
         </Flex>
+        <Table data={tableData} showArchived={isChecked}/>
     </Flex>
   );
 };
