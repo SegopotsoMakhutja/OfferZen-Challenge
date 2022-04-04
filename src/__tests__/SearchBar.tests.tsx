@@ -38,7 +38,6 @@ describe('Search Bar component', () => {
     render(<SearchBar searchValue='searching from other component' handleSearch={onInputChange}/>);
     const input = screen.getByPlaceholderText(/search\.\.\./i)
 
-    console.log(input)
     // then
     // @ts-ignore
     expect(input.value).toBe('searching from other component');
